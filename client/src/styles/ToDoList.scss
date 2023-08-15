@@ -1,0 +1,29 @@
+@import "./utils.scss";
+
+.list {
+  width: 800px;
+
+  &-complete {
+    border-radius: 8px;
+    background-color: $back-blue;
+    border: none;
+    color: $primary-color;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &-delete {
+    border-radius: 8px;
+    background-color: transparent;
+    border: 1px solid $accent-color;
+    color: $primary-color;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
