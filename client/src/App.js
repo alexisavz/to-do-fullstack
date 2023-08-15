@@ -1,10 +1,10 @@
-import './App.css';
+import ToDoList from "./components/ToDoList";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-      </header>
+    <div className="flex flex-column flex-centerVer">
+      <h1 className="text-primary text-center mt-2 mb-2">To-Do List</h1>
+      <ToDoList />
     </div>
   );
 }
