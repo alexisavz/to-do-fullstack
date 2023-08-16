@@ -42,6 +42,16 @@ app.delete("/api/delete", (req, res) => {
     })
 })
 
+app.put("/api/update", (req,res) => {
+    const id = req.body.data.id
+    const sqlUpdate = "UPDATE todos SET completed = TRUE WHERE id = ?;"
+
+    db.query(sqlUpdate, [id], (err, result) => {
+        res.send(result)
+    })
+
+})
+
 app.listen(3001, () => {
   console.log("Server running on port 3001");
 });
