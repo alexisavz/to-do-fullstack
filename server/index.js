@@ -25,6 +25,17 @@ app.get("/api/pending", (req, res) => {
     })
 })
 
+app.post("/api/create", (req, res) => {
+    const task = req.body.task;
+    
+    const sqlInsert = "INSERT INTO todos (task, completed) VALUES (?, false);"
+
+    db.query(sqlInsert, [task], (err, result) =>{
+        console.log(result)
+        res.send(result)
+    })
+})
+
 app.listen(3001, () => {
     console.log("Server running on port 3001")
 })

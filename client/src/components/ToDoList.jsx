@@ -24,8 +24,6 @@ function ToDoList() {
     fetchData();
   }, []);
 
-  console.log(todos);
-
   return (
     <section>
       <div className="list flex flex-column flex-centerHor">
@@ -34,7 +32,7 @@ function ToDoList() {
         })}
       </div>
       <div>
-        <InputTask />
+        <InputTask handleRefresh={handleRefresh}/>
       </div>
     </section>
   );
