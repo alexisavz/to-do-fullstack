@@ -5,7 +5,7 @@ function ToDo({ task, id, handleRefresh, completed }) {
   const handleDelete = async () => {
     try {
       await axios.delete("http://localhost:3001/api/delete", {
-        id: id, // Include the data in the request body
+        data: { id: id }, // Include the data in the request body
       });
       alert("Task Deleted Successfully");
       handleRefresh();
