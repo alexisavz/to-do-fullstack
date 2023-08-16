@@ -29,7 +29,7 @@
 <h3 align="center">To Do Fullstack App</h3>
 
   <p align="center">
-    This is a simple to do app. Funcionality may varya bit. It will be implemented using a backend, meaning that the different processes should actually be stored. More than anything this is just practice on using a fullstack.
+    This is a simple to-do app. Functionality may vary a bit. It will be implemented using a backend, meaning that the different processes should actually be stored. More than anything this is just practice on using a fullstack.
     <br />
     <a href="https://github.com/alexisavz/to-do-fullstack/tree/main"><strong>Explore the docs »</strong></a>
     <br />
@@ -69,7 +69,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This is a simple To Do application with the purpose of practicing using a full stack for development. below you can see the technologies used for this specific project.
+This is a simple To-Do application with the purpose of practicing using a full stack for development. below you can see the technologies used for this specific project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -89,8 +89,8 @@ This is a simple To Do application with the purpose of practicing using a full s
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This repo does not include the db, for it please contact me, or create your own. The project consists of two folders: "client", and "server".
-Here you will find the front end and the backend respectively.
+This repo does not include the DB, for it please contact me, or create your own. The project consists of two folders: "client", and "server".
+Here you will find the front end and the back end respectively.
 
 ### Prerequisites
 
