@@ -1,0 +1,31 @@
+@import "./utils.scss";
+
+input {
+  border: 1px solid $accent-color;
+  border-radius: 8px;
+  height: 1.5rem;
+  color: $primary-color;
+  font-size: 1.25rem;
+}
+
+.input {
+  &-container {
+    width: 800px;
+  }
+
+  &-title {
+    font-size: 1.5rem;
+    color: $back-light-blue;
+    margin-bottom: 0.5rem;
+  }
+
+  &-button {
+    background-color: $back-blue;
+    font-size: 1.5rem;
+    border-radius: 8px;
+    border: none;
+    width: 8.75rem;
+    margin-top: 0.5rem;
+    color: $primary-color;
+  }
+}
