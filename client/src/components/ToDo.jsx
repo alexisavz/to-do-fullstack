@@ -1,8 +1,7 @@
 import "../styles/ToDo.scss";
 import axios from "axios";
 
-function ToDo({ task, id, handleRefresh }) {
-
+function ToDo({ task, id, handleRefresh, completed }) {
   const handleDelete = async () => {
     try {
       await axios.delete("http://localhost:3001/api/delete", {
@@ -30,12 +29,16 @@ function ToDo({ task, id, handleRefresh }) {
   return (
     <div className="container mb-1 text-primary flex flex-row">
       <p>{task}</p>
-      <div className="flex flex-row flex-centerVer flex-gap05">
-        <button className="container-button-complete" onClick={handleUpdate}>O</button>
-        <button className="container-button-delete" onClick={handleDelete}>
-          X
-        </button>
-      </div>
+      {!completed && (
+        <div className="flex flex-row flex-centerVer flex-gap05">
+          <button className="container-button-complete" onClick={handleUpdate}>
+            O
+          </button>
+          <button className="container-button-delete" onClick={handleDelete}>
+            X
+          </button>
+        </div>
+      )}
     </div>
   );
 }

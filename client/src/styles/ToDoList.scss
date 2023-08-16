@@ -27,3 +27,19 @@
     }
   }
 }
+
+.toggle {
+  font-size: 1rem;
+  color: $primary-color;
+  padding: 0.5rem;
+  border-radius: 8px;
+  background-color: transparent;
+
+  &-pending {
+    border: 2px solid $back-light-blue;
+  }
+
+  &-completed {
+    border: 2px solid $accent-color;
+  }
+}

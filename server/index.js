@@ -17,7 +17,15 @@ app.use(cors());
 
 app.get("/api/pending", (req, res) => {
   const sqlGet =
-    "SELECT todos.task, todos.id FROM todos WHERE todos.completed = false;";
+    "SELECT todos.task, todos.id, todos.completed FROM todos WHERE todos.completed = false;";
+  db.query(sqlGet, (err, result) => {
+    res.send(result);
+  });
+});
+
+app.get("/api/completed", (req, res) => {
+  const sqlGet =
+    "SELECT todos.task, todos.id, todos.completed FROM todos WHERE todos.completed = true;";
   db.query(sqlGet, (err, result) => {
     res.send(result);
   });
@@ -34,23 +42,22 @@ app.post("/api/create", (req, res) => {
 });
 
 app.delete("/api/delete", (req, res) => {
-    const id = req.body.id
-    const sqlDelete = "DELETE FROM todos WHERE id = ?;";
+  const id = req.body.id;
+  const sqlDelete = "DELETE FROM todos WHERE id = ?;";
 
-    db.query(sqlDelete, [id], (err, result) => {
-        res.send(result)
-    })
-})
+  db.query(sqlDelete, [id], (err, result) => {
+    res.send(result);
+  });
+});
 
-app.put("/api/update", (req,res) => {
-    const id = req.body.data.id
-    const sqlUpdate = "UPDATE todos SET completed = TRUE WHERE id = ?;"
+app.put("/api/update", (req, res) => {
+  const id = req.body.data.id;
+  const sqlUpdate = "UPDATE todos SET completed = TRUE WHERE id = ?;";
 
-    db.query(sqlUpdate, [id], (err, result) => {
-        res.send(result)
-    })
-
-})
+  db.query(sqlUpdate, [id], (err, result) => {
+    res.send(result);
+  });
+});
 
 app.listen(3001, () => {
   console.log("Server running on port 3001");

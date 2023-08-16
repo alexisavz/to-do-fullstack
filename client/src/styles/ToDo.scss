@@ -1,36 +1,36 @@
 @import "./utils.scss";
 
-.container{
-    border-radius: 8px;
-    border: 2px solid white;
-    padding: 1rem 2rem 1rem 1rem;
-    gap: 3rem;
-    width: 100%;
-    justify-content: space-between;
-    box-sizing: border-box;
+.container {
+  border-radius: 8px;
+  border: 2px solid white;
+  padding: 1rem 2rem 1rem 1rem;
+  gap: 3rem;
+  width: 100%;
+  justify-content: space-between;
+  box-sizing: border-box;
 
-    &-button{
-        font-size: 1rem;
-        &-complete{
-            color: $primary-color;
-            font-size: 1rem;
-            background-color: $back-blue;
-            border: 2px solid $back-blue;
-            border-radius: 8px;
-            &:hover{
-                cursor: pointer;
-            }
-        }
-
-        &-delete{
-            color: $primary-color;
-            font-size: 1rem;
-            background-color: transparent;
-            border: 2px solid $accent-color;
-            border-radius: 8px;
-            &:hover{
-                cursor: pointer;
-            }
-        }
+  &-button {
+    font-size: 1rem;
+    &-complete {
+      color: $primary-color;
+      font-size: 1rem;
+      background-color: $back-blue;
+      border: 2px solid $back-blue;
+      border-radius: 8px;
+      &:hover {
+        cursor: pointer;
+      }
     }
+
+    &-delete {
+      color: $primary-color;
+      font-size: 1rem;
+      background-color: transparent;
+      border: 2px solid $accent-color;
+      border-radius: 8px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
 }
