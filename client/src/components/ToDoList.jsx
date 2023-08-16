@@ -28,7 +28,7 @@ function ToDoList() {
     <section>
       <div className="list flex flex-column flex-centerHor">
         {todos.map((todo) => {
-          return <ToDo key={todo.id} task={todo.task}/>
+          return <ToDo key={todo.id} task={todo.task} id={todo.id} handleRefresh={handleRefresh}/>
         })}
       </div>
       <div>
